@@ -13,4 +13,12 @@ public class Led {
     private LocalTime dateon;
     private LocalTime dateoff;
 
+    public Led(String id)
+    {
+        this.id = id;
+        state = false;
+    }
+
+
+
 }
