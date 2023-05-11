@@ -64,20 +64,6 @@ public class ListDE {
 
 
 
-
-    public List<Led> print() {
-        ledList.clear();
-
-        NodeDE temp = head;
-
-        while (temp != null) {
-            ledList.add(temp.getData());
-            temp = temp.getNext();
-        }
-
-        return ledList;
-    }
-
     public void addToStart(Led led) {
         NodeDE newNode = new NodeDE(led);
         if (head != null) {
