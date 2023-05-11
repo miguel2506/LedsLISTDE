@@ -8,12 +8,12 @@ import java.time.LocalTime;
 @Data
 @AllArgsConstructor
 public class Led {
-    private String id;
+    private int id;
     private boolean state;
     private LocalTime dateon;
     private LocalTime dateoff;
 
-    public Led(String id)
+    public Led(int id)
     {
         this.id = id;
         state = false;

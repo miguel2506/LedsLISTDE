@@ -19,13 +19,8 @@ public class ListDEController {
 
 
     @GetMapping(path = "/add/{id}")
-    public ResponseEntity<ResponseDTO> add(@PathVariable String id){
-
-
+    public ResponseEntity<ResponseDTO> add(@PathVariable int id){
         listDEService.getLeds().add(new Led(id));
-
-
-
         return new ResponseEntity<>(new ResponseDTO(
                 200, "Se ha adicionado un nuevo led",
                 null), HttpStatus.OK);
