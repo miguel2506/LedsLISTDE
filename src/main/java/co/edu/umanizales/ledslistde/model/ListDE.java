@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.prefs.NodeChangeEvent;
 
 
 @Data
@@ -42,6 +43,19 @@ public class ListDE {
                 temp= temp.getNext();
             }
         }
+    }
+
+    public List<Led> print() {
+        ledList.clear();
+        if(head != null){
+            NodeDE temp=head;
+            while (temp != null){
+                ledList.add(temp.getData());
+                temp=temp.getNext();
+            }
+        }
+
+        return ledList;
     }
 
     public void turnOff() {

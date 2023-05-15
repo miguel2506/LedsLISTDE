@@ -17,7 +17,12 @@ public class ListDEController {
     @Autowired
     private ListDEService listDEService;
 
-
+    @GetMapping
+    public ResponseEntity<ResponseDTO> getLeds() {
+        return new ResponseEntity<>(new ResponseDTO(
+                200, listDEService.getLeds().print(), null), HttpStatus.OK);
+    }
+    
     @GetMapping(path = "/add/{id}")
     public ResponseEntity<ResponseDTO> add(@PathVariable int id){
         listDEService.getLeds().add(new Led(id));
