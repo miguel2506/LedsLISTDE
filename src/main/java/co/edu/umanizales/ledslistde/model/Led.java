@@ -9,16 +9,13 @@ import java.time.LocalTime;
 @AllArgsConstructor
 public class Led {
     private int id;
-    private boolean state;
-    private LocalTime dateon;
-    private LocalTime dateoff;
+    private boolean ledState;
+    private LocalTime dateOn;
+    private LocalTime dateOff;
 
     public Led(int id)
     {
         this.id = id;
-        state = false;
+        ledState = false;
     }
-
-
-
 }
